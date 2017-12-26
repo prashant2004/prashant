@@ -1,14 +1,27 @@
 {
-  "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
-  ],
-  "comments": [
-    { "id": 1, "body": "some comment", "postId": 1 },
-    { "id": 2, "body": "some comment", "postId": 1 }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+    "description": "Topology",
+    "nodes": [
+        {"id": "corpzone", "name": "corpzone", "type": "domain", "fx": 350, "fy": 250},
+        {"id": "avertcorp", "name": "avertcorp", "type": "domain", "fx": 550, "fy": 250},
+        {"id": "Emp-PC-4", "name": "Emp-PC-4", "type": "device", "props" : {"os": "Windows"}},
+        {"id": "Emp-PC-3", "name": "Emp-PC-3", "type": "device", "props" : {"os": "Windows"}},
+        {"id": "Emp-PC-2", "name": "Emp-PC-2", "type": "device", "props" : {"os": "Windows"}},
+        {"id": "Emp-PC-1", "name": "Emp-PC-1", "type": "device", "props" : {"os": "Windows"}},
+        {"id": "LAB-PC-1", "name": "LAB-PC-1", "type": "device", "props" : {"os": "Windows", "admin": true}},
+        {"id": "Emp-PC-5", "name": "Emp-PC-5", "type": "device", "props" : {"os": "Windows", "admin": true}},
+        {"id": "Emp-PC-6", "name": "Emp-PC-6", "type": "device", "props" : {"os": "Windows", "admin": true}},
+        {"id": "Emp-PC-7", "name": "Emp-PC-7", "type": "device", "props" : {"os": "Windows"}},
+        {"id": "LAB-PC-2", "name": "LAB-PC-2", "type": "device", "props" : {"os": "Windows"}}
+    ],
+    "links": [
+        {"source": "corpzone", "target": "Emp-PC-4", "weight": 1},
+        {"source": "corpzone", "target": "Emp-PC-3", "weight": 1},
+        {"source": "corpzone", "target": "Emp-PC-2", "weight": 1},
+        {"source": "corpzone", "target": "Emp-PC-1", "weight": 1},
+        {"source": "corpzone", "target": "Emp-PC-5", "weight": 1},
+        {"source": "corpzone", "target": "Emp-PC-6", "weight": 1},
+        {"source": "corpzone", "target": "Emp-PC-7", "weight": 1},
+        {"source": "avertcorp", "target": "LAB-PC-1", "weight": 1},
+        {"source": "avertcorp", "target": "LAB-PC-2", "weight": 1}
+    ]
 }
